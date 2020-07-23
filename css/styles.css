@@ -1,4 +1,9 @@
-.wallpaper {
-    background-image: url(../images/wallpaper.jpg) rgb(231, 231, 5);
-    height: 500px;
+body {
+
+    background-image: url(../images/wallpaper.jpg);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
 }
+
