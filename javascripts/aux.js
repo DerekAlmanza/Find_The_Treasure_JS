@@ -1,7 +1,3 @@
-let getRandomNumber = limit => {
-    return Math.floor(Math.random() * limit);
-}
-
 let getDistance = (userClick, target) => {
     let diffx = userClick.offsetX - target.x;
     let diffy = userClick.offsetY - target.y;
@@ -9,23 +5,38 @@ let getDistance = (userClick, target) => {
 }
 
 let hintDistance = distance => 
-    distance < 20 ? "You find the treasure!"
-    : distance < 30 ? "Boiling Hot" 
-    : distance < 40 ? " Really Hot"
-    : distance < 60 ? "Hot"
-    : distance < 100 ? "Warm"
-    : distance < 150 ? "Cold"
-    : distance < 200 ? "Really Cold"
+    distance < 30 ? "You find the treasure!"
+    : distance < 40 ? "Boiling Hot" 
+    : distance < 60 ? " Really Hot"
+    : distance < 100 ? "Hot"
+    : distance < 180 ? "Warm"
+    : distance < 180 ? "Cold"
+    : distance < 300 ? "Really Cold"
     : "Freezing";
 
-//let levelMap = {
-//    switch (key) {
-//        case value:
-//            
-//            break;
-//    
-//        default:
-//            break;
-//    }
-//}
+let $$map = document.getElementById("map");
 
+function levelMap() {
+    let level = getRandomNumber(5);
+    console.log(level);
+    switch (level) {
+        case 1:
+            $$map.innerHTML = `<img src = images/treasuremap1.jpg width="350px" height="350px">`
+            break;
+        case 2:
+            $$map.innerHTML = `<img src = images/treasuremap2.jpg width="350px" height="350px">`
+            break;
+        case 3:
+            $$map.innerHTML = `<img src = images/treasuremap3.jpg width="350px" height="350px">`
+            break;
+        case 4:
+            $$map.innerHTML = `<img src = images/treasuremap4.jpg width="350px" height="350px">`
+            break;
+        case 5:
+            $$map.innerHTML = `<img src = images/treasuremap5.jpg width="350px" height="350px">`
+            break;
+        default:
+            $$map.innerHTML = `<img src = images/treasuremap0.png width="350px" height="350px">`
+            break;
+    }
+}
