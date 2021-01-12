@@ -4,4 +4,7 @@
 
 -Proyecto creado con el fin de conocer un poco más de JS.
 
+### Modo de uso
+
+ - Correr archivo index.html
 
